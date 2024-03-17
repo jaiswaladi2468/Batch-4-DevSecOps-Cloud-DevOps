@@ -3,7 +3,7 @@ Start from below link
 
 https://github.com/jaiswaladi2468/Batch-2-DevSecOps-Cloud-DevOps/tree/main/2.Linux%20%26%20Shell%20Scripting
 
-**IPV4 & IPV6: Understanding IP Addresses**
+# IPV4 & IPV6: Understanding IP Addresses
 
 ### IPV4
 

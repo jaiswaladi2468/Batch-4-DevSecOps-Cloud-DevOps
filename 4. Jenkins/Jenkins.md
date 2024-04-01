@@ -96,7 +96,7 @@ Replace `'jdk_name'` and `'maven_name'` with the appropriate names of the JDK an
 
 This pipeline script compiles, tests, and builds a Maven project. You can modify it according to your project requirements.
 
-## Using a Generic WebHook Trigger
+## To set up trigger for a Pipeline Using a Generic WebHook Trigger
 To configure a Jenkins job to trigger from a generic webhook, follow these steps:
 
 ### Install Generic Webhook Trigger Plugin

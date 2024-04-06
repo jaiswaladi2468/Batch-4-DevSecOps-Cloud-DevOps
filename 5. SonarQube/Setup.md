@@ -1,6 +1,5 @@
--
 
-**Setting Up SonarQube with Jenkins Pipeline**
+# Setting Up SonarQube with Jenkins Pipeline
 
 **1. Create a Ubuntu Virtual Machine (VM)**
 

@@ -128,21 +128,22 @@ Sure, I'll explain each line of this Ansible playbook:
       shell: wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
       become: true
    ```
-   This task downloads the GPG key for Trivy and adds it to the keyring file `/usr/share/keyrings/trivy.gpg` using the `wget`, `gpg`, and `tee` commands. The `become: true` directive ensures that this task is executed with elevated privileges.
+   This task downloads the GPG key for Trivy and adds it to the keyring file `/usr/share/keyrings/trivy.gpg using the wget, gpg, and tee commands. The become: true directive ensures that this task is executed with elevated privileges.
+
 
 11. ```yaml
     - name: Add Trivy repository
       shell: echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
       become: true
    ```
-   This task adds the Trivy repository to the package sources list (`/etc/apt/sources.list.d/trivy.list`). It uses the `echo` command to append the repository information to the file. The `become: true` directive ensures that this task is executed with elevated privileges.
+   This task adds the Trivy repository to the package sources list (/etc/apt/sources.list.d/trivy.list). It uses the echo command to append the repository information to the file. The become: true directive ensures that this task is executed with elevated privileges.
 
 12. ```yaml
     - name: Update apt cache
       apt:
         update_cache: yes
    ```
-   This task updates the apt cache on the target system using the `apt` module.
+   This task updates the apt cache on the target system using the apt module.
 
 13. ```yaml
     - name: Install Trivy
